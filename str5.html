@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="ru3.css">
+
+</head>
+
+<body>
+
+ <header class="safe-header">
+    <h1 class="safe-title">Сейф открыт</h1>
+    <p class="safe-subtitle">На карточки НАЖИМАЙ, зеленую кнопку пока не тыкай!</p>
+  </header>
+
+  <!-- Стопка полароидов -->
+  <section class="polaroid-stack" id="polaroidStack">
+    <!-- Карточки добавляются из JS, чтобы не дублировать разметку -->
+  </section>
+
+  <!-- Индикатор: сколько просмотрено -->
+  <div class="stack-progress" id="stackProgress">1 / 6</div>
+
+  <!-- Кнопка «А вот ещё» -->
+  <button class="more-btn" type="button" id="moreBtn">Ещё чуть-чуть фоток↓</button>
+
+  <!-- Сетка остальных фото (скрыта до клика) -->
+  <section class="photo-grid" id="photoGrid" hidden>
+    <!-- Карточки добавляются из JS -->
+  </section>
+
+  <!-- Кнопка на финал -->
+  <a class="next-btn" href="final.html">Дальше →</a>
+
+<script src="script5.js"></script>
+
+</body>

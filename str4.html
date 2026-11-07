@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="ru2.css">
+
+</head>
+
+<body>
+
+    <div class="text">
+
+        <p>Уровень 3. Взлом сейфа</p>
+
+    </div>
+
+    <div class="text2">
+
+        <p>Итак, чтобы взломать сейф нужны цифры, верно?</p>
+        <p>Ты думаешь, что я просто тебе их напишу? Нененене</p>
+        <p>Ну,скорее всего, ты так не думала, это я так написала - для интриги, ахахха</p>
+        <p>В общем, 4 вопроса = 4 цифры, андесдент?  Если не андесдент, то вот тебе суть: 
+            на каждый вопрос будет ответ цифрой, 
+            номер вопроса равен ячейке для ответа. Вот и все</p>
+
+    </div>
+
+
+    <div class="questions">
+
+  <div class="question-card">
+    <div class="q-number">1</div>
+    <div class="q-body">
+      <p class="q-text">В каком месяце мы познакомились? <span class="q-note">НЕ ГОДА</span></p>
+      <input type="text" class="q-input" inputmode="numeric" maxlength="2" placeholder="—" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-number">2</div>
+    <div class="q-body">
+      <p class="q-text">Сколько раз в тг написано слово «люблю»? Если число из двух цифр — напиши первую (например, 23 → 2).</p>
+      <input type="text" class="q-input" inputmode="numeric" maxlength="1" placeholder="—" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-number">3</div>
+    <div class="q-body">
+      <p class="q-text">Число твоего др? Вдруг ты забыла, хих</p>
+      <input type="text" class="q-input" inputmode="numeric" maxlength="2" placeholder="—" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-number">4</div>
+    <div class="q-body">
+      <p class="q-text">Какое количество раз хотели прекратить общение? Хорошенько подумай!</p>
+      <input type="text" class="q-input" inputmode="numeric" maxlength="1" placeholder="—" autocomplete="off">
+    </div>
+  </div>
+
+</div>
+
+<button class="answer-btn" type="button" id="checkBtn">Проверить код</button>
+<div class="result" id="result"></div>
+<script src="script4.js"></script>
+
+</body>

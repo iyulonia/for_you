@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #FCE4EC;
+  font-family: initial;
+}
+
+.la {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 20px;
+}
+
+/* ---------- Торт ---------- */
+.cake-wrap {
+  position: relative;
+  width: 320px;
+  max-width: 85vw;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cake-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Вторая картинка изначально скрыта */
+.cake-out {
+  display: none;
+}
+
+/* После клика: прячем первую, показываем вторую */
+.cake-wrap.blown .cake-lit {
+  display: none;
+}
+
+.cake-wrap.blown .cake-out {
+  display: block;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---------- Подсказка ---------- */
+.hint {
+  margin: 0;
+  font-size: 20px;
+  font-style: italic;
+  color: #8a6a5a;
+  line-height: 1.5;
+  transition: opacity 0.8s ease;
+}
+
+.hint span {
+  display: block;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.hint.hide {
+  opacity: 0;
+}
+
+/* ---------- Поздравление ---------- */
+.congrats {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease 0.5s, transform 1.2s ease 0.5s;
+}
+
+.congrats.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.congrats h1 {
+  font-size: 30px;
+  color: #8a4a5a;
+  margin: 0 0 10px;
+}
+
+.congrats p {
+  font-size: 20px;
+  font-style: oblique;
+  color: #a06a7a;
+  margin: 0;
+}
+
+/* ---------- Салют ---------- */
+#fireworks {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  display: none;
+}
+
+#fireworks.active {
+  display: block;
+}
